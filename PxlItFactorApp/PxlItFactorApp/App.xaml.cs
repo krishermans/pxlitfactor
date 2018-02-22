@@ -13,7 +13,7 @@ namespace PxlItFactorApp
 		{
 			InitializeComponent();
 
-			MainPage = new PxlItFactorApp.MainPage();
+			MainPage = new PxlItFactorApp.Views.ConnectionSettingsPage();
 		}
 
 		protected override void OnStart ()

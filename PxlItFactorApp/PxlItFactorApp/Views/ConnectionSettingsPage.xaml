@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PxlItFactorApp.Views.ConnectionSettingsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Scan for devices" Command="{Binding DiscoverSensorTagsCommand}"></Button>
+            <Label Text="STATUS"></Label>
+            <ListView ItemsSource="{Binding SensorTagCollection}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}"  Detail="{Binding Id}"
+                                  TextColor="Black" DetailColor="AliceBlue"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

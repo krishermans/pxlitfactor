@@ -18,7 +18,7 @@ namespace PxlItFactorApp
         {
             CrossBleAdapter.Current.Scan().Subscribe(sr => 
             {
-                Debug.WriteLine($"found: {sr.Device.Name}");
+                Debug.WriteLine($"found: {sr.Device.Name} - {sr.Device.Uuid}");
                 scanResult = sr;
             });
         }
